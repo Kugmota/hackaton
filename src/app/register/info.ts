@@ -7,4 +7,5 @@ export class Info {
     email: string;
     password: string;
     confirm: string;
+    gender: string;
 }

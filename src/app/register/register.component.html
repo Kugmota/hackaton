@@ -37,6 +37,16 @@
         <div class="titles" *ngIf="age.invalid && (age.dirty || age.touched)" class="alert alert-danger"></div>
         <div class="titles" *ngIf="age.touched && !age.valid">Age is required!</div>
 
+        <h3 class="titles">Gender</h3>
+        <h3 class="titl"> 
+            <select name="gender" [(ngModel)]=inf.gender required #gender="ngModel">
+                <option value="Female">Female</option>
+                <option value="male">Male</option>
+            </select>
+        </h3>
+       
+        
+
         <h3 class="titles">Email</h3>
         <h3 class="titl"> <input placeholder="Input your Email" type="email" name="Email" [(ngModel)]="inf.email" email
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #eMail="ngModel" required /></h3>

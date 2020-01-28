@@ -1,10 +1,30 @@
-<header>
-    <h2>Home</h2>
-    <h2>Log out</h2>
-</header>
+<header>Home</header>
 
-<div>
-    <form>
-        
-    </form>
+<div *ngIf="click">
+  <div class="butt">
+    <button routerLink="/post" class="w3-button w3-xlarge w3-circle w3-black">+</button>
+    <h4>Post</h4>
+  </div>
+ <div class="row">
+   <div class="colum">
+     <div  class="card">
+       <div  *ngFor="let val of arrayOfPost" class="color">
+         <h3>{{val.name}}</h3>
+          <p>{{val.address}}</p>
+          <p>{{val.age}}</p>
+          <button >Accept</button>
+          <button routerLink="/view">View</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
 </div>
+
+<div *ngIf="unclick">
+    <div *ngFor="let array of arrayOfUsers">
+      <h1>Posts from {{array.address}}</h1>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
