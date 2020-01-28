@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { ViewComponent } from './view/view.component';
+import { ErrorComponent } from './error/error.component';
 
 const appRoutes: Routes=[
   { path: 'login', component: LoginComponent},
@@ -17,6 +18,8 @@ const appRoutes: Routes=[
   { path: 'home', component: HomeComponent},
   { path: 'post', component: PostComponent},
   { path: 'view', component: ViewComponent},
+  { path: 'error', component: ErrorComponent },
+  { path: '**', component: ErrorComponent }
 ]
 
 @NgModule({
@@ -27,6 +30,7 @@ const appRoutes: Routes=[
     HomeComponent,
     PostComponent,
     ViewComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

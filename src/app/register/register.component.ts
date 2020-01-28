@@ -20,9 +20,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(fillup){
-    console.log(fillup.form.value)
     this.listOfInfo.push(fillup.form.value);
     fillup.form.reset();
+    console(fillup.form.value)
   }
 
 }

@@ -2,7 +2,7 @@
   <div class="column">
     <div class="card">
       <h1 class="title">Register</h1>
-      <form (submit)="onSubmit(fillup)" #fillup="ngForm">
+      <form #fillup="ngForm">
         <h3 class="titles">Firstname</h3>
         <h3 class="titl"><input placeholder="Input your Firstname" name="firstname" [(ngModel)]="inf.firstname" required
             #firstname="ngModel" /></h3>
@@ -25,8 +25,18 @@
         <div class="titles" *ngIf="username.touched && !username.valid">Username is required!</div>
 
         <h3 class="titles">Address</h3>
-        <h3 class="titl"> <input placeholder="Input your Address" name="address" [(ngModel)]="inf.address" required
-            #address="ngModel" /></h3>
+        <select class="titl" name="address" [(ngModel)]=inf.address required #address="ngModel">
+                <option value="Talamban">Talamban</option>
+                <option value="Zapatera">Zapatera</option>
+                <option value="Santo Nino">Santo Nino</option>
+                <option value="Lahug">Lahug</option>
+                <option value="Parian">Parian</option>
+                <option value="Pasil">Pasil</option>
+                <option value="Labangon">Labangon</option>
+                <option value="Banilad">Banilad</option>
+                <option value="Bulacao">Bulacao</option>
+                <option value="Inayawan">Inayawan</option>
+            </select>
         <div class="titles" *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
         </div>
         <div class="titles" *ngIf="address.touched && !address.valid">Address is required!</div>
@@ -38,8 +48,8 @@
         <div class="titles" *ngIf="age.touched && !age.valid">Age is required!</div>
 
         <h3 class="titles">Gender</h3>
-        <h3 class="titl"> 
-            <select name="gender" [(ngModel)]=inf.gender required #gender="ngModel">
+        <h3> 
+            <select class="titl" name="gender" [(ngModel)]=inf.gender required #gender="ngModel">
                 <option value="Female">Female</option>
                 <option value="male">Male</option>
             </select>
@@ -71,7 +81,7 @@
         </div>
         <div class="titles" *ngIf="inf.confirmpassword != inf.password">Password is not match</div><br>
 
-        <button [disabled]=!fillup.form.valid routerLink="login">Register</button>
+        <button (click)="onSubmit(fillup)" [disabled]=!fillup.form.valid routerLink="login">Register</button>
       </form>
     </div>
   </div>   
