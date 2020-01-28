@@ -1,0 +1,58 @@
+<div *ngIf="edit">
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+      </head>
+      <body>
+      <div class="container">
+        <div class="card">
+          <h3 class="title">Edit Profile</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+            <div>
+                <button (click)="onSubmit()">Click here</button>
+            </div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="title">Return to Homepage</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+            <div>
+                    <button routerLink="/home">Click here</button>
+            </div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50"/>
+          </svg>
+          </div>
+        </div>
+    
+      </div>
+      </body>
+    </div>
+
+<div *ngIf="cancel">
+    <h1>Edit Profile</h1>
+    <div class="cardz">
+        <div class="containera">
+    <h3>Firstame <input placeholder="" /></h3>
+    <h3>Lastame <input placeholder=""  /></h3>
+    <h3>Username <input placeholder=""  /></h3>
+    <h3>Address <input placeholder=""  /></h3>
+    <h3>Age <input placeholder=""  /></h3>
+    <h3>Gender <input placeholder=""  /></h3>
+    <h3>Email <input placeholde="" r /></h3>
+    <h3>Password <input type="password" placeholder=""  /></h3> 
+    </div>
+    <button>Save</button>
+    <button (click)="onCancel()">Cancel</button>
+</div>
+</div>

@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(fillup){
     this.listOfInfo.push(fillup.form.value);
     fillup.form.reset();
-    console(fillup.form.value)
+    // console(fillup.form.value)
   }
 
 }

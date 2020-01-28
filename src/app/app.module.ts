@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { ViewComponent } from './view/view.component';
 import { ErrorComponent } from './error/error.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes=[
   { path: 'login', component: LoginComponent},
@@ -18,8 +19,10 @@ const appRoutes: Routes=[
   { path: 'home', component: HomeComponent},
   { path: 'post', component: PostComponent},
   { path: 'view', component: ViewComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: 'error', component: ErrorComponent },
-  { path: '**', component: ErrorComponent }
+  { path: '**', component: ErrorComponent },
+  
 ]
 
 @NgModule({
@@ -31,6 +34,7 @@ const appRoutes: Routes=[
     PostComponent,
     ViewComponent,
     ErrorComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
