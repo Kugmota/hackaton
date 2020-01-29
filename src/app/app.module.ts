@@ -12,6 +12,8 @@ import { PostComponent } from './post/post.component';
 import { ViewComponent } from './view/view.component';
 import { ErrorComponent } from './error/error.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes=[
   { path: 'login', component: LoginComponent},
@@ -20,9 +22,11 @@ const appRoutes: Routes=[
   { path: 'post', component: PostComponent},
   { path: 'view', component: ViewComponent},
   { path: 'profile', component: ProfileComponent},
+  { path: 'admin', component: AdminComponent},
+  { path: 'dashboard', component: DashboardComponent},
   { path: 'error', component: ErrorComponent },
   { path: '**', component: ErrorComponent },
-  
+
 ]
 
 @NgModule({
@@ -35,6 +39,8 @@ const appRoutes: Routes=[
     ViewComponent,
     ErrorComponent,
     ProfileComponent,
+    AdminComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

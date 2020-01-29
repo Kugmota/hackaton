@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div *ngIf="submit">
+<div>
+  <button (click)="onSubmit()" class="w3-button w3-xlarge w3-circle w3-black">+</button><p>Add admin</p>
+</div>
+<div>
+  <h1>Posts</h1>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Title</th>
+      <th>Details</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let val of arrayOfPost">
+      <th>{{val.name}}</th>
+      <th></th>
+      <th></th>
+      <th><button>Delete</button></th>
+    </tr>
+  </table>
+</div>
+</div>
+
+<div *ngIf="cancel">
+  <form>
+    <h3>Username <input /></h3>
+    <h3>Email <input /></h3>
+    <h3>Password <input /></h3>
+    <h3>Confirm Password <input /></h3>
+  </form>
+</div>
